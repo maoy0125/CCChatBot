@@ -1,0 +1,6 @@
+[build]
+  command = "python Hooda/main.py"
+  publish = "Hooda/templates"
+
+[functions]
+  directory = "api"
