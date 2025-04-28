@@ -47,7 +47,7 @@ def simple_chatbot(user_input, chat_history):
     messages.extend(chat_history)
     messages.append({"role": "user", "content": user_input})
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4.1",
         messages=messages
     )
     response_content = response.choices[0].message.content
