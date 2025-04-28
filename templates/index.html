@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CartGPT</title>
+    <title>CC GPT</title>
     <style>
         :root {
             --text-primary: #2D3748;
@@ -356,7 +356,7 @@
 <body>
     <main class="main-content">
         <div class="top-bar">
-            <div class="model-select">CartGPT</div>
+            <div class="model-select">CC GPT</div>
             <div class="controls">
                 <button class="clear-btn" id="clearChat">Clear Chat</button>
             </div>
@@ -364,8 +364,8 @@
         
         <div class="chat-container" id="chat-container">
             <div class="welcome" id="welcome">
-                <h1>CartGPT</h1>
-                <p>Ask anything about halal food or get recommendations!</p>
+                <h1>CC GPT</h1>
+                <p>Ask anything!</p>
             </div>
             
             <div class="typing-indicator" id="typing-indicator">
@@ -554,8 +554,8 @@
             } else {
                 // Use the halalCart.png image for the assistant
                 const avatarImg = document.createElement('img');
-                avatarImg.src = '/static/halalCart.png';
-                avatarImg.alt = 'CartGPT';
+                avatarImg.src = '/static/PHIL.JPG';
+                avatarImg.alt = 'CC GPT';
                 avatarImg.onerror = function() {
                     console.error('Failed to load avatar image');
                     this.src = ''; // Clear the broken image
