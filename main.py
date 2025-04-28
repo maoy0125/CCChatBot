@@ -19,7 +19,10 @@ app.secret_key = os.getenv('FLASK_SECRET_KEY', os.urandom(24).hex())
 # Set up session configuration - sessions expire after 1 day
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=1)
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+OPENAI_KEY = os.getenv('OPENAI_API_KEY')
+if not OPENAI_KEY:
+    raise ValueError('OPENAI_API_KEY environment variable missing!')
+client = OpenAI(api_key=OPENAI_KEY)
 
 # In-memory storage for chat sessions (in production, use a database)
 chat_sessions = {}
